@@ -1,4 +1,3 @@
-import type { InstanceOptions, IOContext } from '@vtex/api'
 import { JanusClient } from '@vtex/api'
 
 interface CatalogSearchProduct {
@@ -7,10 +6,6 @@ interface CatalogSearchProduct {
 }
 
 export class Catalog extends JanusClient {
-  constructor(context: IOContext, options?: InstanceOptions) {
-    super(context, options)
-  }
-
   /**
    * Returns the product that owns the given SKU, or `null` when the SKU does
    * not exist or is not visible in the storefront catalog.
