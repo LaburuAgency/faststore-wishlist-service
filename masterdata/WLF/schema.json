@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "wishlist-item-v1",
+  "type": "object",
+  "properties": {
+    "shopperId": {
+      "type": "string"
+    },
+    "productId": {
+      "type": "string"
+    },
+    "skuId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["shopperId", "productId", "skuId", "createdAt"],
+  "v-default-fields": ["productId", "skuId", "createdAt"],
+  "v-indexed": ["shopperId", "skuId"],
+  "v-cache": false,
+  "v-security": {
+    "allowGetAll": false,
+    "publicRead": [],
+    "publicWrite": [],
+    "publicFilter": []
+  }
+}

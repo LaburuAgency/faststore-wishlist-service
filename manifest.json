@@ -1,0 +1,37 @@
+{
+  "name": "wishlist-service",
+  "vendor": "laburu",
+  "version": "0.0.1",
+  "title": "Wishlist Service",
+  "description": "Authenticated wishlist API for VTEX storefronts",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "7.x",
+    "docs": "0.x",
+    "masterdata": "1.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/pub/*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
