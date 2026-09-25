@@ -1,6 +1,6 @@
 {
   "name": "wishlist-service",
-  "vendor": "laburu",
+  "vendor": "didopet",
   "version": "0.0.1",
   "title": "Wishlist Service",
   "description": "Authenticated wishlist API for VTEX storefronts",
