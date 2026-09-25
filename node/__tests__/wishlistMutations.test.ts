@@ -21,7 +21,9 @@ const storage = (documents = [existing]) => ({
 
 describe('getWishlistDocumentId', () => {
   it('is stable per shopper and SKU', () => {
-    expect(getWishlistDocumentId('a', '1')).toBe(getWishlistDocumentId('a', '1'))
+    expect(getWishlistDocumentId('a', '1')).toBe(
+      getWishlistDocumentId('a', '1')
+    )
     expect(getWishlistDocumentId('a', '1')).not.toBe(
       getWishlistDocumentId('b', '1')
     )

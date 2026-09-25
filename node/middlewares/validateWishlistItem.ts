@@ -3,6 +3,7 @@ import { json } from 'co-body'
 import type { WishlistItemInput } from '../types/wishlist'
 
 const CATALOG_ID_PATTERN = /^\d{1,20}$/
+
 export const MAX_CHECK_SKUS = 50
 
 export function isCatalogId(value: unknown): value is string {

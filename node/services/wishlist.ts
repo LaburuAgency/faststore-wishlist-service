@@ -24,7 +24,9 @@ interface WishlistSearchClient {
 }
 
 interface WishlistStorageClient extends WishlistSearchClient {
-  saveOrUpdate: (document: WishlistDocument & { id: string }) => Promise<unknown>
+  saveOrUpdate: (
+    document: WishlistDocument & { id: string }
+  ) => Promise<unknown>
   delete: (id: string) => Promise<unknown>
 }
 

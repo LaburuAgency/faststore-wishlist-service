@@ -62,9 +62,7 @@ export const getWishlist = (ctx: Context) =>
 
 export const addItem = (ctx: Context) =>
   runForShopper(ctx, 'Unable to add wishlist item', async (id) =>
-    toResponse(
-      await addWishlistItem(ctx.clients.wishlist, id, ctx.state.item!)
-    )
+    toResponse(await addWishlistItem(ctx.clients.wishlist, id, ctx.state.item!))
   )
 
 export const removeItem = (ctx: Context) =>
